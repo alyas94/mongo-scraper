@@ -46,9 +46,15 @@ app.set("view engine", "handlebars");
 // Connect mongo DB
 
 // mongoose.connect("mongodb://localhost/mongoscraper");
-mongoose.connect("mongodb://@ds245210.mlab.com:45210/heroku_jjzw55jp");
-//mongoose.connect("mongodb://localhost/mongoscraper");
-var db = mongoose.connection;
+
+var databaseUri = "mongodb://localhost/mongoscraper";
+
+//------------------------
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
 
 var db = mongoose.connection;
 
