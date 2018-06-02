@@ -45,7 +45,7 @@ app.set("view engine", "handlebars");
 
 // Connect mongo DB
 
-mongoose.connect("mongodb://localhost/mongoscraper");
+// mongoose.connect("mongodb://localhost/mongoscraper");
 
 var databaseUri = "mongodb://localhost/mongoscraper";
 if (process.env.MONGOD_URI) {
