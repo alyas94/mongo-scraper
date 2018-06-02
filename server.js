@@ -8,8 +8,8 @@ var path = require("path");
 var exphbs = require("express-handlebars");
 
 // Requiring Note and Article models
-var Note = require("./models/note.js");
-var Article = require("./models/article.js");
+var Note = require("./models/Note.js");
+var Article = require("./models/Article.js");
 
 // Scraping tools
 var request = require("request");
