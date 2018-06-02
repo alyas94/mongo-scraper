@@ -1,0 +1,28 @@
+body {
+  background-color: #cde5f1;
+}
+
+h1,
+.title {
+  font-family: "Oswald", sans-serif;
+}
+
+#scrape {
+  margin: 8px 0px;
+}
+
+.deleteNote {
+  display: inline-block;
+}
+
+.previousNotes {
+  display: inline-block;
+  width: 90%;
+}
+
+.jumbotron {
+  opacity: 50%;
+  text-align: center;
+  margin-top: 4em;
+  background-color: white;
+}
