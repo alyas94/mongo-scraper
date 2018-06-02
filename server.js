@@ -45,17 +45,15 @@ app.set("view engine", "handlebars");
 
 // Connect mongo DB
 
-// var databaseUri = "mongodb://localhost/mongoscraper";
+var databaseUri = "mongodb://localhost/mongoscraper";
 
 //------------------------
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mongoscraper");
-
-// if (process.env.MONGODB_URI) {
-//   mongoose.connect(process.env.MONGODB_URI);
-// } else {
-//   mongoose.connect(databaseUri);
-// }
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
 
 var db = mongoose.connection;
 
